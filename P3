@@ -1,0 +1,131 @@
+Hotlines = [
+    {
+        "name": "?",
+        "number": "?",
+        "Service": "?"
+    },
+    {
+        "name": "?",
+        "number": "?",
+        "Service": "?"
+    }
+]
+
+Category = {
+    "Fire and Rescue": [
+        {
+            "name": "?",
+            "number": "?",
+            "Service": "?"
+        }
+    ],
+    "Police Assistance": [
+        {
+            "name": "?",
+            "number": "?",
+            "Service": "?"
+        }
+    ],
+    "Medical Assistance": [
+        {
+            "name": "?",
+            "number": "?",
+            "Service": "?"
+        }
+    ],
+    "Disaster Response": [
+        {
+            "name": "?",
+            "number": "?",
+            "Service": "?"
+        }
+    ]
+}
+
+Tips = {
+    "Fire and Rescue": [
+        "?.",
+        "?"
+    ],
+    "Accident Assistance": [
+        "?",
+        "?"
+    ]
+}
+
+
+def View_All_Hotlines(hotlines):
+    print("\nALL HOTLINES")
+
+    for hotline in hotlines:
+        print("\nName:", hotline["name"])
+        print("Number:", hotline["number"])
+        print("Service:", hotline["Service"])
+
+
+def Emergency_Hotlines(Category):
+    while True:
+        print("\nEMERGENCY TYPE HOTLINES")
+        print("[1] Fire and Rescue")
+        print("[2] Police Assistance")
+        print("[3] Medical Assistance")
+        print("[4] Disaster Response")
+        print("[5] Back to Main Menu")
+
+        choice = input("\nEnter your choice (1-5): ")
+
+        if choice == "1":
+            selected = "Fire and Rescue"
+        elif choice == "2":
+            selected = "Police Assistance"
+        elif choice == "3":
+            selected = "Medical Assistance"
+        elif choice == "4":
+            selected = "Disaster Response"
+        elif choice == "5":
+            return
+        else:
+            print("Invalid choice. Please try again.")
+            continue
+
+        print("\nCategory:", selected)
+
+        for hotline in Category[selected]:
+            print("Name:", hotline["name"])
+            print("Number:", hotline["number"])
+            print("Service:", hotline["Service"])
+
+
+def Safety_Tips(Tips):
+    print("\nSAFETY TIPS")
+
+    for category, tip_list in Tips.items():
+        print("\nCategory:", category)
+
+        for tip in tip_list:
+            print("-", tip)
+
+while True:
+    print("\nEMERGENCY HOTLINES")
+    print("1. View All Hotlines")
+    print("2. Emergency Type Hotlines")
+    print("3. Safety Tips")
+    print("4. Exit")
+
+    choice = input("\nEnter your choice (1-4): ")
+
+    if choice == "1":
+        View_All_Hotlines(Hotlines)
+
+    elif choice == "2":
+        Emergency_Hotlines(Category)
+
+    elif choice == "3":
+        Safety_Tips(Tips)
+
+    elif choice == "4":
+        print("Thank you for using the Emergency Hotline System. Stay safe!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
