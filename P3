@@ -43,11 +43,19 @@ Category = {
 }
 
 Tips = {
-    "Fire and Rescue": [
+    "Fire Safety": [
         "?.",
         "?"
     ],
-    "Medical Assistance": [
+    "Medical Safety": [
+        "?",
+        "?"
+    ],
+    "Crime Safety": [
+        "?",
+        "?"
+    ],
+    "Flood Safety": [
         "?",
         "?"
     ]
@@ -65,7 +73,7 @@ def View_All_Hotlines(hotlines):
 
 def Emergency_Hotlines(Category):
     while True:
-        print("\nEMERGENCY TYPE HOTLINES")
+        print("\n Find Hotline by Type of Emergency")
         print("[1] Fire and Rescue")
         print("[2] Police Assistance")
         print("[3] Medical Assistance")
@@ -108,10 +116,10 @@ def Safety_Tips(Tips):
         choice = input("\nEnter your choice (1-5): ")
 
         if choice == "1":
-            selected = "Fire and Rescue"
+            selected = "Fire Safety"
 
         elif choice == "2":
-            selected = "Medical Assistance"
+            selected = "Medical Safety"
 
         elif choice == "3":
             selected = "Crime Safety"
@@ -135,7 +143,7 @@ def Safety_Tips(Tips):
 while True:
     print("\nEMERGENCY HOTLINES")
     print("[1] View All Hotlines")
-    print("[2] Emergency Type Hotlines")
+    print("[2] Find Hotline by Type of Emergency")
     print("[3] Safety Tips")
     print("[4] Exit")
 
@@ -156,4 +164,3 @@ while True:
 
     else:
         print("Invalid choice. Please try again.")
-
