@@ -709,8 +709,8 @@ def View_All_Hotlines(Hotlines):
 
 def Emergency_Hotlines(Category):
     while True:
-        print("\nFind Hotline by Type of Emergency")
-        print("[1] National Hotlines")
+        print("\n===Find Hotline by Type of Emergency===")
+        print("\n[1] National Hotlines")
         print("[2] Fire and Rescue")
         print("[3] Police Assistance")
         print("[4] Medical Assistance")
@@ -788,7 +788,7 @@ def Safety_Tips(Tips):
         print("\nCategory:", selected)
 
         for tip in Tips[selected]:
-            print("\n-", tip)
+            print("\-", tip)
 
 while True:
     print("\n=====EMERGENCY HOTLINES=====")
@@ -800,44 +800,16 @@ while True:
     choice = input("\nEnter your choice (1-4): ")
 
     if choice == "1":
-        View_All_Hotlines(Hotlines)
+        print(View_All_Hotlines(Hotlines))
 
     elif choice == "2":
-        Emergency_Hotlines(Category)
+        print(Emergency_Hotlines(Category))
 
     elif choice == "3":
-        Safety_Tips(Tips)
+        print(Safety_Tips(Tips))
 
     elif choice == "4":
-        print("Thank you for using the Emergency Hotline System. Stay safe!")
-        break
-
-    else:
-        print("Invalid choice. Please try again.")
-
-        for tip in Tips[selected]:
-            print("\n-", tip)
-
-while True:
-    print("\n=====EMERGENCY HOTLINES=====")
-    print("\n[1] View All Hotlines")
-    print("[2] Find Hotline by Type of Emergency")
-    print("[3] Safety Tips")
-    print("[4] Exit")
-
-    choice = input("\nEnter your choice (1-4): ")
-
-    if choice == "1":
-        View_All_Hotlines(Hotlines)
-
-    elif choice == "2":
-        Emergency_Hotlines(Category)
-
-    elif choice == "3":
-        Safety_Tips(Tips)
-
-    elif choice == "4":
-        print("Thank you for using the Emergency Hotline System. Stay safe!")
+        print("Thank you for using the Emergency Hotline Directory for Cabanatuan City Residents. Stay safe!")
         break
 
     else:
