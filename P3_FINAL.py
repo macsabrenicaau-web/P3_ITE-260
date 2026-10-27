@@ -819,3 +819,26 @@ while True:
             print("\n-", tip)
 
 while True:
+    print("\n=====EMERGENCY HOTLINES=====")
+    print("\n[1] View All Hotlines")
+    print("[2] Find Hotline by Type of Emergency")
+    print("[3] Safety Tips")
+    print("[4] Exit")
+
+    choice = input("\nEnter your choice (1-4): ")
+
+    if choice == "1":
+        View_All_Hotlines(Hotlines)
+
+    elif choice == "2":
+        Emergency_Hotlines(Category)
+
+    elif choice == "3":
+        Safety_Tips(Tips)
+
+    elif choice == "4":
+        print("Thank you for using the Emergency Hotline System. Stay safe!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
