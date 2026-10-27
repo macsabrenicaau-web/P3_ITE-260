@@ -788,7 +788,7 @@ def Safety_Tips(Tips):
         print("\nCategory:", selected)
 
         for tip in Tips[selected]:
-            print("\-", tip)
+            print("\n-", tip)
 
 while True:
     print("\n=====EMERGENCY HOTLINES=====")
