@@ -814,3 +814,7 @@ while True:
 
     else:
         print("Invalid choice. Please try again.")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
